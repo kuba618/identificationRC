@@ -1,0 +1,17 @@
+.root {
+	-fx-background-color: #272e2a;
+}
+.button {
+	-fx-background-color: linear-gradient(#a2e5f0,#94dae6);
+	-fx-text-fill: #000000;
+}
+#duzy {
+	-fx-font-family: Times New Roman;
+	-fx-font-size: 24px;
+	-fx-fill: #90d8b2;
+	
+}
+.label {
+	-fx-font-size: 12px;
+	-fx-text-fill: #e6a5cf;
+}

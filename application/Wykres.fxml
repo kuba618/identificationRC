@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <center>
+      <LineChart fx:id="wykress" BorderPane.alignment="CENTER">
+        <xAxis>
+          <NumberAxis label="Czas (milisekundy)" side="BOTTOM" tickLabelFill="#f6ff00" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Prędkość (km/h)" side="LEFT" tickLabelFill="#fff600" />
+        </yAxis>
+         <BorderPane.margin>
+            <Insets right="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="5.0" right="15.0" top="10.0" />
+         </padding>
+      </LineChart>
+   </center>
+   <top>
+      <Text id="duzy" strokeType="OUTSIDE" strokeWidth="0.0" text="Wykres" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#wczytajdane" text="Wczytaj">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#zapiszdane" text="Zapisz">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="przybl" alignment="CENTER" mnemonicParsing="false" onAction="#rysujprzyblizony" text="Przybliżenie" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Region prefHeight="20.0" prefWidth="600.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
